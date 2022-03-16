@@ -139,7 +139,7 @@ class TelegramMonitor():
                         doc["url"] = f"https://t.me/c/{group_name_value_id}/{message_id}"
 
                     if doc["chat_text"] or doc["image_ocr"]:
-                        log.info(doc)
+                        log.info(json.dumps(doc))
 
         await client.run_until_disconnected()
 
